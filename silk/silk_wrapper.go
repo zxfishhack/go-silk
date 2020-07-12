@@ -92,7 +92,7 @@ func DecodeSilkBuffToWave(src []byte, sampleRate int) (dst []byte, err error) {
 			}
 			return
 		}
-		if nByte > frameSize {
+		if int(nByte) > frameSize {
 			err = ErrInvalid
 			return
 		}
